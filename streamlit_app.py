@@ -47,13 +47,14 @@ def welcome():
         st.session_state.district = selected_district
         st.session_state.report = True
         st.rerun()
+      
     if st.session_state.role == "User":
-        with col2:
+        with col2.container():
             if st.button("Log in as an Admin"):
                 st.session_state.role = "Unverified_Admin"
                 st.rerun()
     elif st.session_state.role == "Admin":
-        with col2:
+        with col2.container():
             if st.button("Log out"):
                 st.session_state.role = "User"
                 st.success("You have successfully log out.")
