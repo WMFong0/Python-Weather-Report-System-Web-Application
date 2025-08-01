@@ -42,12 +42,11 @@ def welcome():
     #selected_district = st.selectbox("Please select your district below", Districts, accept_new_options = True)
     selected_district = "Tuen Mun"
 
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button(f"Check Weather of {selected_district}"):
-            st.session_state.district = selected_district
-            st.session_state.report = True
-            st.rerun()
+    col2 = st.empty
+    if st.button(f"Check Weather of {selected_district}"):
+        st.session_state.district = selected_district
+        st.session_state.report = True
+        st.rerun()
     if st.session_state.role == "User":
         with col2:
             if st.button("Log in as an Admin"):
