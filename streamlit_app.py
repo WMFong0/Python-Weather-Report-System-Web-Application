@@ -39,7 +39,7 @@ def welcome():
     st.write("Welcome using Weather Report System. <br>"
              "This system uses Hong Kong Observatory Data to report. ", unsafe_allow_html = True)
     
-    #selected_district = st.selectbox("Please select your district below", Districts, accept_new_options = True)
+    selected_district = st.selectbox("Please select your district below", Districts, accept_new_options = True)
     selected_district = "Tuen Mun"
     
     if st.button(f"Check Weather of {selected_district}"):
