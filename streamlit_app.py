@@ -42,7 +42,7 @@ def welcome():
     selected_district = st.selectbox("Please select your district below", Districts, accept_new_options = True)
     
     if st.button(f"Check Weather of {selected_district}" if selected_district != None else "Please select district first"):
-        if select_district != None:
+        if selected_district != None:
             st.session_state.district = selected_district
             st.session_state.report = True
             st.rerun()
