@@ -48,7 +48,7 @@ def welcome():
             st.rerun()
         else:
             with st.container():
-                st.failed("Please select district first")
+                st.warning("Please select district first")
     
     
     col2 = st.container()
