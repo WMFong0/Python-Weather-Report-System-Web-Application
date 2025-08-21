@@ -58,6 +58,12 @@ def select_place(original_selection, raw_data_temperature_datasection: list, var
 
     return station
 
+# Let's see if unordered list would help
 def lazy_list_message(message_list: list = []):
-  for message in message_list:
-    print(f"\t{message}")
+    if not message_list:
+        return ""
+    html = "<ul>"
+    for message in message_list:
+        html += f"<li>{message}</li>"
+    html += "</ul>"
+    return html
