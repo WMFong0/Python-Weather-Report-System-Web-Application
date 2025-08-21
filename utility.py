@@ -36,9 +36,7 @@ def select_place(original_selection, raw_data_temperature_datasection: list, var
     if original_selection in available_station:
       return original_selection
 
-    return None
-/*
-# Not used in streamlit
+    # Not used in streamlit
     # Required Manual Case
     print("Since we currently doesn't support automatic selection of weather station at your district\n Please select the nearest weather station from the list below: ")
     station = ""
@@ -59,7 +57,6 @@ def select_place(original_selection, raw_data_temperature_datasection: list, var
       print("You have input a unavailable station. Please input a available Station." + "\n"*2)
 
     return station
-*/
 
 # Let's see if unordered list would help
 def lazy_list_message(message_list: list = []):
