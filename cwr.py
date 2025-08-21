@@ -5,7 +5,8 @@ District_reference_for_temperature = {
 import requests
 import json
 from utility import twentyfourh_to_12h
-
+space = "&nbsp;"
+tab = space * 3
 class Current_Weather_Report():
   raw_data = None
   temperature = None
@@ -50,7 +51,7 @@ class Current_Weather_Report():
 
     for temp in raw_data_lighting['data']:
       if temp["occur"] == "true":
-        messages.append(f"\t{temp['place']}")
+        messages.append(tab + f"{temp['place']}")
 
     return messages
 
@@ -129,11 +130,11 @@ class Current_Weather_Report():
     }
 
     messages.append(f"Humidity data recorded at {twentyfourh_to_12h(result['recordTime'])}: ")
-    messages.append(f"\tAt {result['place']}, the humidity recorded is {result['value']}.")
+    messages.append(tab + f"At {result['place']}, the humidity recorded is {result['value']}.")
 
     if (temp['unit'] == 'percent'):
       humidity_level = 'Low' if temp['value'] < 25 else 'Moderate' if temp['value'] < 75 else 'High'
-      messages.append(f"\t Humidity Level is {humidity_level}")
+      messages.append(tab + space + f" Humidity Level is {humidity_level}")
 
     return messages
 
@@ -145,9 +146,9 @@ class Current_Weather_Report():
       return messages
 
     n = len(result)
-    messages.append(f"\nHere {'is 1' if n == 1 else f'are {n}'} warning message{'s' if n != 1 else ''} from Hong Kong Observatory:")
+    messages.append("<br>" + f"Here {'is 1' if n == 1 else f'are {n}'} warning message{'s' if n != 1 else ''} from Hong Kong Observatory:")
     for message in result:
-      messages.append(f"\t{message}")
+      messages.append(tab + f"{message}")
     return messages
 
   def fetch_and_process_ultil(self) -> list:
@@ -157,7 +158,7 @@ class Current_Weather_Report():
     if specialWxTips:
       messages.append("\nHere are some special Weather Tips from HKO: ")
       for message in specialWxTips:
-        messages.append(f"\t{message}")
+        messages.append(tab + f"{message}")
 
     # Tropical Cyclone Position
     tcmessage = self.raw_data.get('tcmessage')
@@ -166,7 +167,7 @@ class Current_Weather_Report():
       messages.append("\nHere are some information relating to Tropical Cyclone from HKO: ")
       messages.append(f"Currently there {'is 1' if n == 1 else f'are {n}'} tropical cyclone{'s' if n != 1 else ''} near Hong Kong")
       for message in tcmessage:
-        messages.append(f"\t{message}")
+        messages.append(tab + f"{message}")
 
     # Others are always unavailable without any reason why
     return messages
