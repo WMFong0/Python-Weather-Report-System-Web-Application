@@ -4,7 +4,7 @@ District_reference_for_temperature = {
 }
 import requests
 import json
-from utility import twentyfourh_to_12h  # Assuming utility.py is in the same directory
+from utility import twentyfourh_to_12h
 
 class Current_Weather_Report():
   raw_data = None
