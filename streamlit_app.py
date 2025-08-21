@@ -1,5 +1,11 @@
 import streamlit as st
 import time
+import datetime
+import requests
+from utility import *  
+from cwr import Current_Weather_Report
+from Hourly_Rainfall import Hourly_Rainfall
+
 # session_state init
 if "role" not in st.session_state:
   st.session_state.role = "User"
@@ -13,15 +19,21 @@ Districts = [None, "Tuen Mun", "Tin Shui Wai", "Yuen Long"]
 
 def Test_Page_Check_Weather():
     Current_district = st.session_state.district
-    DAY_Weather_types = ["rain_cloud", "sun_behind_rain_cloud", 
-                    "partly_sunny_rain", "sun_behind_cloud",
-                    "barely_sunny", "sun_small_cloud", 
-                    "mostly_sunny", "sunny"]
-    NIGHT_Weather_types = []
-    Current_Weather_types = DAY_Weather_types[-2]
-    st.header(f":{Current_Weather_types}: Weather Report in {Current_district}")
-
-    st.write(f"{Current_district} is {Current_Weather_types.replace('_', ' ')} today")
+    
+    st.header(f"Weather Report in {Current_district}")
+    
+    current_datetime = datetime.datetime.now().astimezone(datetime.timezone(datetime.timedelta(hours=8)))
+    st.write(current_datetime.strftime('Today is %Y/%m/%d. \nCurrent Time: %H:%M:%S'))
+    
+    rainfall = Hourly_Rainfall(Current_district)
+    rainfall_messages = rainfall.fetch_bundle()
+    for msg in rainfall_messages:
+        st.write(msg)
+    
+    weather = Current_Weather_Report(Current_district)
+    weather_messages = weather.fetch_bundle()
+    for msg in weather_messages:
+        st.write(msg)
 
 def leave_blank_for_development():
     st.header(":red[Page under development]", divider='gray')
@@ -39,7 +51,7 @@ def welcome():
     st.write("Welcome using Weather Report System. <br>"
              "This system uses Hong Kong Observatory Data to report. ", unsafe_allow_html = True)
     
-    selected_district = st.selectbox("Please select your district below", Districts, accept_new_options = True)
+    selected_district = st.selectbox("Please select your district below", Districts)
     
     if st.button(f"Check Weather of {selected_district}" if selected_district != None else "Please select district first"):
         if selected_district != None:
@@ -108,7 +120,7 @@ def Admin_login():
             my_bar.empty()
             if Login_Check(Username, Password):
                 st.session_state.role = "Admin"
-                st.success('''Verification Sucess. 
+                st.success('''Verification Success. 
                 You will be directed back to the Main Page. 
                 Select any district to check the weather and debug''')
                 time.sleep(1)
