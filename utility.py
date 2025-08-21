@@ -61,4 +61,3 @@ def select_place(original_selection, raw_data_temperature_datasection: list, var
 def lazy_list_message(message_list: list = []):
   for message in message_list:
     print(f"\t{message}")
-print(twentyfourh_to_12h("18:00:00"))
