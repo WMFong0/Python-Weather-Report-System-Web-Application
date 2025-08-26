@@ -1,19 +1,5 @@
-# 🎈 Blank app template
+This is a web version of the Python Weather Report System
 
-A simple Streamlit app template for you to modify!
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://python-weather-report-system-randomly0.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+What could you expect:
+- A low-level interactive map that assists with user selection of data.
+- Other stuff should be similar to the Python version.
