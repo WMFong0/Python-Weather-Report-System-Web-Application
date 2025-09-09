@@ -1,0 +1,37 @@
+Area,Location at Area,District,Location in District,Weather Station,Weather Station Location,Nearest LandMark,Lat_deg,Lat_min,Lat_sec,Lon_deg,Lon_min,Lon_sec
+Hong Kong Island,Central,Central & Western District,East,Magazine Gap,Magazine Gap Fresh Water Pumping Station,Mid-Levels,22,16,18,114,9,50
+Hong Kong Island,Central,Central & Western District,West,The Peak,Peak Sub-Division Police Station,,22,15,51,114,9,18
+Hong Kong Island,East,Eastern District,,Shau Kei Wan,Hong Kong Museum of the War of Resistance and Costal Defence,Sai Wan Ho,22,16,54,114,14,10
+New Territories,South,Islands District,West,Cheung Chau,Cheung Chau Meteorological Station,,22,12,4,114,1,36
+New Territories,South,Islands District,West,Hong Kong International Airport,Air Traffic Control Centre,,22,18,34,113,55,19
+New Territories,South,Islands District,West,Ngong Ping,Ngong Ping Fresh Water Service Reservoir, ,22,15,20,113,54,41
+New Territories,South,Islands District,West,Peng Chau,Peng Chau Transmitting Station,,22,17,28,114,2,36
+New Territories,South,Islands District,South East,Waglan Island,Waglan Island Lighthouse,,22,10,56,114,18,12
+Kowloon,North,Kowloon City,North,Broadcast Drive,Lung Cheung Court Block 5,Hong Kong Baptist University,22,20,34,114,10,44
+Kowloon,South,Kowloon City,South,Kai Tak,Kai Tak Cruise Terminal Slipway,,22,18,35,114,12,48
+New Territories,West,Kwai Tsing,,Cheung Ching,Ching Pak House(Tsing Yi),,22,20,53,114,6,33
+Kowloon,East,Kwun Tong,,Kwun Tong,Ngau Tau Kwok Service Reservoir/OFCA Radio Monitoring Unit,,22,19,7,114,13,28
+New Territories,North,North District,West,Sheung Shui,De La Salle Secondary School New Territories,,22,30,7,114,6,40
+New Territories,North,North District,East,Ta Kwu Ling,Ta Kwu Ling Farm/AFCD Ta Kwu Ling Operation Center,Heung Yun Wai Control Point,22,31,43,114,9,24
+New Territories,East,Sai Kung,South,Clear Water Bay,The Clearwater Bay Golf and Country Club Hong Kong,Fat Tong Mun Lighthouse,22,15,48,114,17,59
+New Territories,East,Sai Kung,South,Kau Sai Chau,The Jockey Club Kau Sai Chau Public Golf Course,Hong  Kong University of Science and Technology,22,22,13,114,18,45
+New Territories,East,Sai Kung,North,Pak Tam Chung,Pak Tam Chung Lowland Raw Water Pumping Station,Pak Tam Chung ,22,24,10,114,19,23
+New Territories,East,Sai Kung,North,Sai Kung,Hong Kong Adventist College,,22,18,27,114,17,13
+New Territories,East,Sai Kung,South,Tseung Kwan O,Haven of Hope Hospital,,22,18,57,114,15,20
+New Territories,East,Sha Tin,,Sha Tin,Sha Tin Racecourse,,22,24,9,114,12,36
+Kowloon,West,Sham Shui Po,,Sham Shui Po,,,22,20,9,114,8,13
+Hong Kong Island,South East,Southern District,East,Stanley,St Stephen's College Centenary Building,,22,12,56,114,12,56
+Hong Kong Island,South West,Southern District,West,Wong Chuk Hang,Grantham Hospital,,22,15,4,114,10,24
+New Territories,East,Tai Po,East,Tai Mei Tuk,,,22,28,31,114,14,15
+New Territories,East,Tai Po,West,Tai Po Market,Tai Po Wong Shiu Chi Secondary School,,22,26,44,114,10,18
+New Territories,North,North District,South,Tai Lung,,Sheung Shui South,22,29,5,114,7,3
+New Territories,West,Tsuen Wan,East,Tsuen Wan Ho Koon,,,22,23,1,114,6,28
+New Territories,West,Tuen Mun,,Tuen Mun,Tuen Mun Children and Juvenile Home,,22,23,9,113,57,51
+Hong Kong Island,West,Wan Chai,,Happy Valley,,,22,16,14,114,11,1
+Kowloon,East,Wong Tai Sin,,San Po Kong,Robert Black General Out-Patient Clinic/ San Po Kong Elderly Health Centre,,22,19,57,114,11,44
+Kowloon,South,Yau Tsim Mong,South,Hong Kong Observatory,,,22,18,7,114,10,27
+Kowloon,South,Yau Tsim Mong,North,King's Park,,Queen Elizabeth Hospital,22,18,43,114,10,22
+New Territories,West,Yuen Long,West,Lau Fau Shan,,,22,28,8,113,59,1
+New Territories,West,Yuen Long,East,Shek Kong,,,22,26,10,114,5,5
+New Territories,West,Yuen Long,Center,Shui Pin Wai,Shui Pin Wai Estate: Hong Shui House ,Yuen Long  Park,22,26,46,114,1,15
+New Territories,West,Yuen Long,West,Wetland Park,Not Applicable,,22,28,0,114,0,32
