@@ -46,7 +46,7 @@ with Header.container():
     st.header(f"Weather Report at {st.session_state['selected_district']}")
     st.subheader('Time Information')
     current_datetime = datetime.now().astimezone(timezone(timedelta(hours=8)))
-    st.markdown(f'<ul><li>{current_datetime.strftime("Today is %Y/%m/%d. \nCurrent Time: %H:%M:%S")}</li></ul>', unsafe_allow_html=True)
+    st.markdown(f'<ul><li>{current_datetime.strftime("Today is %Y/%m/%d. <br>Current Time: %H:%M:%S")}</li></ul>', unsafe_allow_html=True)
 
 
 cwr.update_user_data()
@@ -63,3 +63,4 @@ with Current_Weather.container():
         st.markdown(f"<h1>Warning Information</h1><ul><li>{cwr.fetch_and_process_warning()}</li></ul>" , unsafe_allow_html = True)
     with st.empty():
         st.markdown(f"<h1>Special Message Information</h1><ul><li>{cwr.fetch_and_process_ultil()}</li></ul>" , unsafe_allow_html = True)
+
